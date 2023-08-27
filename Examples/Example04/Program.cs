@@ -20,14 +20,14 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        matrix[i, j] = new Random().Next(0,10);
+        matrix[i, j] = new Random().Next(0, 10);
         Console.Write(matrix[i, j] + " ");
 
         if (i == j)
         {
-            sum += matrix[i,j];
+            sum += matrix[i, j];
         }
     }
-Console.WriteLine();
+    Console.WriteLine();
 }
 Console.WriteLine("сумма по главной диагонали = " + sum);

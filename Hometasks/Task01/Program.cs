@@ -21,6 +21,6 @@ for (int i = 0; i < matrix.GetLength(0); i++)
         matrix[i, j] = Math.Round(new Random().Next(-99, 99) + new Random().NextDouble(), 2);
         Console.Write(matrix[i, j] + " ");
     }
-Console.WriteLine();
+    Console.WriteLine();
 }
 
