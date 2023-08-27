@@ -28,25 +28,13 @@ for (int i = 0; i < matrix.GetLength(0); i++)
 {
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        if (j == 0)
-        {
-            sum0 += matrix[i, j];
-        }
+        if (j == 0) { sum0 += matrix[i, j]; }
 
-        else if (j == 1)
-        {
-            sum1 += matrix[i, j];
-        }
+        else if (j == 1) { sum1 += matrix[i, j]; }
 
-        else if (j == 2)
-        {
-            sum2 += matrix[i, j];
-        }
+        else if (j == 2) { sum2 += matrix[i, j]; }
 
-        else if (j == 3)
-        {
-            sum3 += matrix[i, j];
-        }
+        else if (j == 3) { sum3 += matrix[i, j]; }
 
     }
 }
