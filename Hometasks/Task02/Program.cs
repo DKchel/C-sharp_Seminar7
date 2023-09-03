@@ -31,12 +31,9 @@ Console.WriteLine();
 Console.WriteLine("Введите позицию искомого элемента");
 int elemPos = Convert.ToInt32(Console.ReadLine());
 
-if (elemPos / 10 <= rows && elemPos % 10 <= columns)
+if (elemPos > 0 && elemPos / 10 <= rows && elemPos % 10 <= columns)
 {
     Console.WriteLine("Искомый элемент: " + matrix[elemPos / 10, elemPos % 10]);
 }
 
-else
-{
-    Console.WriteLine("Такого элемента нет");
-}
+else {Console.WriteLine("Такого элемента нет");}
