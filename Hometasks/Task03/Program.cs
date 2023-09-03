@@ -7,7 +7,15 @@
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
 
-int[,] matrix = new int[3, 4];
+Console.WriteLine("Введите первую размерность");
+int rows = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите вторую размерность");
+int columns = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine();
+
+int[,] matrix = new int[rows, columns];
 
 for (int i = 0; i < matrix.GetLength(0); i++)
 {
@@ -19,29 +27,16 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     Console.WriteLine();
 }
 
-int sum0 = 0;
-int sum1 = 0;
-int sum2 = 0;
-int sum3 = 0;
+double sum = 0;
 
-for (int i = 0; i < matrix.GetLength(0); i++)
+for (int j = 0; j < matrix.GetLength(1); j++)
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        if (j == 0) { sum0 += matrix[i, j]; }
-
-        else if (j == 1) { sum1 += matrix[i, j]; }
-
-        else if (j == 2) { sum2 += matrix[i, j]; }
-
-        else if (j == 3) { sum3 += matrix[i, j]; }
-
+        sum += matrix[i, j];
     }
+    decimal arithmetic = Math.Round((decimal)sum / rows, 1);
+    Console.WriteLine($"Среднее арифметическое столбца {j + 1} равно {arithmetic}");
+    sum = 0;
 }
 
-decimal arithmetic0 = Math.Round((decimal)sum0 / 3, 1);
-decimal arithmetic1 = Math.Round((decimal)sum1 / 3, 1);
-decimal arithmetic2 = Math.Round((decimal)sum2 / 3, 1);
-decimal arithmetic3 = Math.Round((decimal)sum3 / 3, 1);
-
-Console.WriteLine($"Среднее арифметическое каждого столбца: {arithmetic0}; {arithmetic1}; {arithmetic2}; {arithmetic3}");
